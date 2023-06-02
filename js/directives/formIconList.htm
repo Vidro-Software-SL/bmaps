@@ -1,0 +1,22 @@
+<div class="form-component form-component--photo-gallery">
+
+	<div class="spacer-15"></div>
+	<label>{{label}}</label>
+	<div class="spacer-5"></div>
+
+	<ul class="">
+		<li ng-repeat="item in values">
+			<div class="photo" ng-click="openDoc(item.url,item.hash,item.fextension)" ng-if="item.fextension=='png' || item.fextension=='jpg' || item.fextension=='jpeg' || item.fextension==null">
+				<form-thumb ng-if="item.fextension=='png' || item.fextension=='jpg' || item.fextension=='jpeg'" data="{{item.hash}}" width="24" height="24"></form-thumb>
+			</div>
+			<div class="doc" ng-click="openDoc(item.url,item.hash,item.fextension)" ng-if="item.fextension=='doc' || item.fextension=='pdf' || item.fextension=='svg' || item.fextension=='rtf' || item.fextension=='txt' || item.fextension=='odt'">
+				<form-thumb-doc data="{{item.hash}}"></form-thumb-doc>
+
+			</div>
+			<div class="footer">
+				<button ng-click="deleteImg(item.hash,item.id)"><img src="img/ic/actionDelete.svg" /></button>
+			</div>
+		</li>
+	</ul>
+
+</div>

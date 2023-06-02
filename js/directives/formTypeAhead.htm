@@ -1,0 +1,11 @@
+<div class="form-component form-component--key-value typeahead-demo">
+	<label for="background">{{label}}</label>
+	<div>
+		<input type="text" ng-model="value" placeholder="{{placeholder}}" uib-typeahead="data.display_name for data in getData($viewValue)" typeahead-loading="loadingMsg" typeahead-no-results="noresultsMsg" typeahead-on-select="selectAction($item,$model,$label,$event)" ng-disabled="disabled" ng-blur="updateAction()"/>
+				<i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+				<div ng-show="noResults">
+					<i class="glyphicon glyphicon-remove"></i> {{noresultsMsg}}
+				</div>
+	</div>
+	<div class="spacer-10"></div>
+</div>

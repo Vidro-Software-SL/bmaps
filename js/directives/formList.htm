@@ -1,0 +1,9 @@
+<div class="form-component form-component--select-multiple">
+	<label>{{label}}</label>
+	<ul>
+		<li ng-repeat="item in values" id="li_element_{{$index}}" ng-dblclick="clickAction(item)" ng-click="selectAction(item)">
+			<!-- se muestran todos los elementos que vengan en la respuesta, excepto lo que empiezan con sys_,  la clave primaria para ejecutar la acción que pertoque siempre es sys_id-->
+			<span ng-repeat="(key, value) in item" ng-if="displayAttribute(key)" ng-show="key!='selected'"><b>{{key}}</b>: {{value}}<br /></span>
+		</li>
+	</ul>
+</div>

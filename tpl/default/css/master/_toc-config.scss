@@ -1,0 +1,28 @@
+//main: style.scss
+
+.toc-config{
+    font-size: 14px;
+
+    .uib-datepicker-popup{
+        list-style: none;
+        margin: 20px 0 0 0;
+        padding: 0;
+        .btn{
+            margin-left: .2em;
+            margin-right: .2em;
+            border-radius: 0px;
+            padding: 5px;
+            font-size: 11px;
+        }
+
+        button.btn.btn-default.btn-sm.pull-left.uib-left:before {
+            content: "←";
+        }
+
+        button.btn.btn-default.btn-sm.pull-right.uib-right:before {
+            content: "→";
+        }
+
+    }
+
+}

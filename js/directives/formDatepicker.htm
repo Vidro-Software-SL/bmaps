@@ -1,0 +1,17 @@
+<div class="form-component form-component--key-value" style="z-index:999;">
+	<label>{{label}}:</label>
+	<input
+		type="text"
+		id="{{fieldName}}"
+		ng-model="value"
+		uib-datepicker-popup="{{format}}"
+		is-open="dp_filter_options.opened"
+		alt-input-formats="altInputFormats"
+		show-button-bar="false"
+		ng-click="set_date(); dp_open();"
+		ng-change="updateAction()"
+		ng-disabled="disabled"
+		datepicker-options="dp_options"
+    startingDay="1"
+		autocomplete="off"/>
+</div>

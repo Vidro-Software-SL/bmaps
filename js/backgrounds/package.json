@@ -1,0 +1,21 @@
+{
+  "name": "backgrounds",
+  "version": "1.0.0",
+  "description": "Backgrounds for bmaps",
+  "main": "bg.js",
+  "scripts": {
+    "watch": "watchify -g [ babelify --presets [ @babel/preset-env ] ] bg.js -o ../src/bgBundle.js",
+    "build": "browserify -g [ babelify --presets [ @babel/preset-env ] ] bg.js -o ../src/bgBundle.js",
+    "dist": "browserify -g [ babelify --presets [ @babel/preset-env ] ] bg.js -o ../src/bgBundle.js | uglifyjs ../src/bgBundle.js -mc > ../dist/bgBundle.$npm_package_version.min.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "babelify": "^10.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.0"
+  }
+}

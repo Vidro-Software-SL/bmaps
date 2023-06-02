@@ -1,0 +1,42 @@
+// main: style.scss
+
+$min-width-desktop: 700px;
+$max-width-tablet: 699px;
+$min-width-tablet: 501px;
+$max-width-mobile: 500px;
+
+@mixin only-desktop {
+    @media (min-width: $min-width-desktop){
+        @content;
+    }
+}
+
+@mixin only-tablet {
+    @media (min-width: $min-width-tablet) and (max-width: $max-width-tablet){
+        @content;
+    }
+}
+
+@mixin only-mobile {
+    @media (max-width: $max-width-mobile){
+        @content;
+    }
+}
+
+@mixin only-desktop-and-tablet {
+    @media (min-width: $min-width-tablet){
+        @content;
+    }
+}
+
+@mixin only-mobile-and-tablet {
+    @media (max-width: $max-width-tablet){
+        @content;
+    }
+}
+
+@mixin ellipsize{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

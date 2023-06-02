@@ -1,0 +1,41 @@
+// main: style.scss
+
+.notifyjs-corner{
+    padding: 0 60px;
+    top: 60px !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+}
+
+.notifyjs-bootstrap-base {
+    font-weight: bold;
+    border: none !important;
+    padding-left: 0 !important;
+    text-shadow: none !important;
+    color: #FFFFFF !important;
+    padding: 10px 25px !important;
+    background-image: none !important;
+    text-align: center !important;
+    white-space: inherit !important;
+    
+
+    &.notifyjs-bootstrap-error {
+        // color: #84002f !important;
+        background-color: #ef1d67 !important;
+    }
+
+    &.notifyjs-bootstrap-warning{
+        // color: #a07800 !important;
+        background-color: #ffc000 !important;
+    }
+
+    &.notifyjs-bootstrap-success{
+        // color: #019554 !important;
+        background-color: #1cf395 !important;
+    }
+
+    &.notifyjs-bootstrap-info{
+        // color: #017a8c !important;
+        background-color: #0cd5f3 !important;
+    }
+}

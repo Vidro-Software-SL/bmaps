@@ -1,0 +1,173 @@
+// main: style.scss
+
+// All levels
+
+.toc-layouts{
+    font-size: 13px;
+    font-weight: bold;
+
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li{
+            padding: 0;
+            margin: 0;
+            display: block;
+            
+            @include only-mobile-and-tablet{
+                &:not(:last-child) .title{
+                    border-bottom: 1px solid #e2e2e2;
+                }
+            }
+            
+            .title{
+                overflow: hidden;
+                text-transform: uppercase;
+                display:flex;
+                flex-wrap: nowrap;
+
+                .title-text{
+                    cursor: pointer;
+                    padding: 6px 10px 6px 0;
+                    display: inline-block;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    flex-grow: 1;
+                }
+            }
+
+            &.no-margin{
+                margin: 0;
+            }
+
+            img.chevron,
+            svg.chevron{
+                transition: all .2s cubic-bezier(0, 0, 0.5, 1.5);
+                transform: rotate(-90deg);
+                cursor: pointer;
+                margin: 6px;
+                flex-shrink: 0;
+                
+                path{ fill: $color-menu-text; }
+            }
+
+            &.active{
+                > .title > img.chevron,
+                > .title > svg.chevron{
+                    transform: rotate(0deg);
+                }
+                >ul{
+                    display: block;
+                }
+            }
+
+            &.selected{
+                background-color: #ececec;
+            }
+        }
+        
+        .legend{
+            overflow: hidden;
+
+            .ico-space{
+                vertical-align: middle;
+            }
+            
+            img{
+                display: inline-block;
+                vertical-align: middle;
+                margin: -5px 10px 8px 6px;
+            }
+        }
+    }
+
+}
+
+// First level
+
+.toc-layouts > ul{
+    margin: 0px 0;
+    
+    > li {
+        &:first-child(){
+            margin-top: 0;
+        }
+    }
+}
+
+// Second level
+
+.toc-layouts > ul > li > ul{
+    display: none;
+    color: $color-menu-text-dimmed;
+    
+    > li > .title{
+        padding-left: 29px;
+    }
+    
+    > .legend{
+        padding-left: 19px;
+    }
+
+}
+
+// Third level
+
+.toc-layouts > ul > li > ul > li > ul{
+    display: none;
+    
+    > li >.title{
+        padding-left: 57px;
+    }
+    
+    > .legend{
+        padding-left: 47px;
+    }
+
+}
+
+// Fourth level
+
+.toc-layouts > ul > li > ul > li > ul > li > ul{
+    display: none;
+    
+    > .legend{
+        padding-left: 75px;
+    }
+}
+
+.ico-space{
+    float: left;
+    padding: 9px;
+    
+    svg{
+        width: 16px;
+        height: 16px;
+        display:block;
+        
+        path{
+            fill: $color-menu-text;
+        }
+    }
+}
+
+.watchable{
+    float: left;
+    cursor: pointer;
+
+    svg.eye{ display:none; path{ fill: $color-accent; } }
+    svg.eye-off{ display:block; path { fill: $color-menu-text; } }
+
+    &.watching{
+        svg.eye{ display:block;}
+        svg.eye-off{ display:none;}
+    }
+
+    &.disabled{
+        opacity: .3;
+        cursor: not-allowed;
+    }
+}

@@ -1,0 +1,9 @@
+<div class="form-component {{style}}">
+	<label>{{label}}</label>
+		<select
+					id="{{fieldName}}"
+					ng-model="value"
+					ng-disabled="disabled"
+					data-ng-options="item.id as item.name for item in comboItems"  ng-change="updateAction()">
+		</select>
+</div>

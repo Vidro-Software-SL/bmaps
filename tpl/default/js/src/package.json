@@ -1,0 +1,36 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "description": "Tasks for creating bmaps ui",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babelify": "^10.0.0",
+    "colors": "^1.4.0",
+    "fancy-log": "^1.3.3",
+    "gulp": "^4.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-json-modify": "^1.0.2",
+    "gulp-ngmin": "^0.3.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "minimist": "^1.2.5"
+  },
+  "versions": {
+    "uiMaps": "3.3.0",
+    "uiHome": "1.0.5",
+    "uiFiles": "1.0.0",
+    "uiTable": "1.1.0",
+    "bmaps": "2.3.0"
+  },
+  "dependencies": {}
+}

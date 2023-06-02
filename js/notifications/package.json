@@ -1,0 +1,22 @@
+{
+  "name": "notifications",
+  "version": "1.0.0",
+  "description": "",
+  "main": "notifications.js",
+  "scripts": {
+    "watch": "watchify -g [ babelify --presets [ @babel/preset-env ] ] notifications.js -o ../src/notificationsBundle.js",
+    "build": "browserify -g [ babelify --presets [ @babel/preset-env ] ] notifications.js -o ../src/notificationsBundle.js",
+    "dist": "browserify -g [ babelify --presets [ @babel/preset-env ] ] notifications.js -o ../src/notificationsBundle.js | uglifyjs ../src/notificationsBundle.js -mc > ../dist/notificationsBundle.$npm_package_version.min.js"
+  },
+  "author": "Vidro Software SL",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "ol": "^6.4.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "babelify": "^10.0.0"
+  }
+}

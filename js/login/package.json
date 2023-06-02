@@ -1,0 +1,23 @@
+{
+  "name": "login",
+  "version": "1.0.1",
+  "description": "",
+  "main": "login.js",
+  "scripts": {
+    "watch": "watchify -g [ babelify --presets [ @babel/preset-env ] ] login.js -o ../src/loginBundle.js",
+    "build": "browserify -g [ babelify --presets [ @babel/preset-env ] ] login.js -o ../src/loginBundle.js",
+    "dist": "browserify -g [ babelify --presets [ @babel/preset-env ] ] login.js -o ../src/loginBundle.js | uglifyjs ../src/loginBundle.js -mc > ../dist/loginBundle.$npm_package_version.min.js"
+
+  },
+  "author": "Vidro Software SL",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "md5": "^2.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "babelify": "^10.0.0"
+  }
+}

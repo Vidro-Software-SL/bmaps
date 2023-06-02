@@ -1,0 +1,22 @@
+{
+  "name": "offline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "offline.js",
+  "scripts": {
+    "watch": "watchify -g [ babelify --presets [ @babel/preset-env ] ] offline.js -o ../src/offlineBundle.js",
+    "build": "browserify -g [ babelify --presets [ @babel/preset-env ] ] offline.js -o ../src/offlineBundle.js",
+    "dist": "browserify -g [ babelify --presets [ @babel/preset-env ] ] offline.js -o ../src/offlineBundle.js | uglifyjs ../src/offlineBundle.js -mc > ../dist/offlineBundle.$npm_package_version.min.js"
+  },
+  "author": "Vidro Software SL",
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "babelify": "^10.0.0"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "localforage": "^1.7.3"
+  }
+}

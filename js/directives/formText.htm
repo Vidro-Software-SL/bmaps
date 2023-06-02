@@ -1,0 +1,6 @@
+<div class="form-component form-component--key-value" ng-class="errorClass">
+	<label>{{label}}</label>
+	<input type="text" ng-model="value" ng-change="updateFieldValue(fieldName)" placeholder="{{placeholder}}" ng-blur="updateAction()" ng-disabled="disabled">
+	<div class="error" ng-show="displayError">{{erroMsg}}</div>
+	<div class="spacer-10"></div>
+</div>

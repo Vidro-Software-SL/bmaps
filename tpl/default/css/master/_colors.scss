@@ -1,0 +1,35 @@
+// main: style.scss
+$color-header-login: #dadad9;
+$color-header-common: #dadad9;
+$color-primary: #ffffff;
+$color-accent:  #005cb8;
+$color-text: #1c1c1b;
+$color-menu-bg: transparentize($color-primary, 0.2);
+$color-tb-tool-selected: #004c99;
+
+$color-menu-text-dimmed: #888888;
+
+$color-btn-success: #00bfa5;
+$color-btn-danger:  #ff1744;
+$color-btn-default: #8b8b8b;
+$color-btn-default-light: #dadad9;
+$color-btn-accent: $color-accent;
+
+$color-menu-background: #FFFFFF;
+$color-menu-text: $color-text;
+$color-menu-item-active: #dadad9;
+$color-menu-dropdown-background: #f5f5f5;
+$color-menu-item-divider: #e9e9e9;
+/* separator lines between buttons */
+$color-ul-tools-first: #004387;
+$color-ul-tools-last: #5292CE;
+/* end separator lines between buttons */
+
+/* mobile tools background color */
+$color-menu-tools-mobile-background: $color-accent;
+$color-menu-tools-mobile-scrollbar: #003a75;
+/* end mobile tools background color */
+/* map backgound color */
+$map-background-color: white;
+/* attributes table */
+$selectedRowColor: #5292CE;
